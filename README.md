@@ -9,5 +9,6 @@
 
 Версии программ окружения:<br>
 &bull; OS Ubuntu 18.04<br>
+&bull; Symfony 4.4<br>
 &bull; PHP 7.3.14<br>
 &bull; Apache 2.4.29
