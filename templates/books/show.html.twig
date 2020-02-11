@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Book Page{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<br><br>
+		<h2 class="col-12">Book Page</h2>
+		<br>
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="card">
+				<div class="card-body">
+
+					<div>Title: {{ book.title }}</div>
+					<br>
+					<div>Year: {{ book.publishYear }}</div>
+					<br>
+					<div>Author: {{ book.author }}</div>
+					<br>
+
+					<div class="row">
+						<a href="{{ path('editBook', {'book':book.id}) }}" class="col-3">
+							<button type="button" class="btn btn-lg btn-block btn-outline-primary">Edit</button>
+						</a>
+
+						<br>
+{#					<div class="text-white bg-white">#}
+						<a href="{{ path('deleteBook', {'book':book.id}) }}" class="col-3">
+							<button type="button" class="btn btn-lg btn-block btn-outline-primary">Delete</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

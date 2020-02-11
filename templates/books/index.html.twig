@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Main Page{% endblock %}
+
+{% block body %}
+    {#<style>#}
+    {#    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }#}
+    {#    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }#}
+    {#</style>#}
+
+    <div class="container">
+        <br><br>
+        <h2>List of Books</h2>
+        <br>
+
+        <div class="row">
+            <a href="{{ path('createBook') }}" class="col-3">
+                <button type="button" class="btn btn-lg btn-block btn-outline-success">Create Book</button>
+            </a>
+
+        </div>
+
+        <br><br>
+        {% for book in books %}
+            <div class="card">
+                <div class="card-body">
+                    <div>Title: {{ book.title }}</div><br>
+                    <div>Year: {{ book.publishYear }}</div><br>
+                    <div>Author: {{ book.author }}</div><br>
+
+                    <div class="row">
+                        <a href="{{ path('oneBook', {'book':book.id}) }}" class="col-3">
+                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Watch</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br>
+        {% endfor %}
+
+    </div>
+{% endblock %}
