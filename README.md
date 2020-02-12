@@ -5,7 +5,8 @@
 &bull; скачать проект<br>
 &bull; в консоли выполнить команду composer install (сам композер должен быть установлен)<br>
 &bull; переименовать файл .env.template в .env <br>
-&bull; вписать в файл .env доступы к базе данных.
+&bull; вписать в файл .env доступы к базе данных <br>
+&bull; в консоли выполнить команду php bin/console doctrine:migrations:migrate<br>
 
 Версии программ окружения:<br>
 &bull; OS Ubuntu 18.04<br>

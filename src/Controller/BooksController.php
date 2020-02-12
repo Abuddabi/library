@@ -20,7 +20,7 @@ class BooksController extends AbstractController
    */
   public function index(BooksRepository $booksRepository)
   {
-    $books = array_reverse($booksRepository->findAll());
+//    phpinfo(); die;
     $books = $booksRepository->findBy([], ['id'=>'DESC']);
 
     return $this->render('books/index.html.twig', [
