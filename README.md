@@ -5,8 +5,9 @@
 &bull; скачать проект<br>
 &bull; в консоли выполнить команду composer install (сам композер должен быть установлен)<br>
 &bull; переименовать файл .env.template в .env <br>
-&bull; вписать в файл .env доступы к базе данных <br>
-&bull; в консоли выполнить команду php bin/console doctrine:migrations:migrate<br>
+&bull; вписать в файл .env доступы к базе данных (логин, пароль, название БД для создания) <br>
+&bull; выполнить команду php bin/console doctrine:database:create (создаст БД)<br>
+&bull; выполнить команду php bin/console doctrine:migrations:migrate (создаст таблицы в БД)<br>
 
 Версии программ окружения:<br>
 &bull; OS Ubuntu 18.04<br>
